@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Model-based Diffusion model for LACT">
+    <meta name="author" content="Jiaming Liu,
+    Rushil Anirudh, 
+    Jayaraman J Thiagarajan, 
+    Stewart He, 
+    K Aditya Mohan,
+    Ulugbek S Kamilov, 
+    Hyojin Kim">
+
+    <title>DOLCE: A model-based probabilistic diffusion framework for limited-angle ct reconstruction</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+
+</head>
+
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container"></div>
+    <h2>DOLCE: A Model-Based Probabilistic Diffusion Framework for Limited-Angle CT Reconstruction</h2> <h2></h2>
+    <h3></h3> <!--ICCV, 2023</h3>-->
+            <p class="abstract"><b>A New Deep Model-based Framework for LACT Using Conditional Diffusion Model As Image Prior</b></p>
+    <hr>
+    <p class="authors">
+        <a href="https://jiamingliu-jeremy.github.io"> Jiaming Liu</a><sup>1</sup>,
+        <a href="https://rushila.com/"> Rushil Anirudh</a><sup>2</sup>,
+        <a href="https://jjthiagarajan.com/">Jayaraman J Thiagarajan</a><sup>2</sup>, 
+        <a href="https://scholar.google.com/citations?hl=en&user=kzsPxXAAAAAJ&view_op=list_works&sortby=pubdate">Stewart He<sup>2</sup>,</br> 
+        <a href="https://adityamnk.wixsite.com/portfolio">K Aditya Mohan</a><sup>2</sup>, 
+        <a href="https://engineering.wustl.edu/faculty/Ulugbek-Kamilov.html"> Ulugbek S. Kamilov</a><sup>1</sup>,
+        <a href="https://people.llnl.gov/kim63">K Hyojin Kim </a><sup>2</sup>
+    </p>
+
+    <div class="is-size-5 publication-authors">
+    <span class="author-block"><sup>1</sup>Washington University in St. Louis,</span>
+    <span class="author-block"><sup>2</sup>Lawrence Livermore National Laboratory</span>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Top menu">
+        <a class="btn btn-primary" href="">Paper</a>
+        <a class="btn btn-primary" href="https://arxiv.org/abs/2211.12340">Preprint</a>
+        <a class="btn btn-primary" href="">Code</a>
+        <!--  <a class="btn btn-primary" href="https://github.com/wustl-cig/DeCoLearn">GitHub</a> -->
+    </div>
+
+    
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="section">
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    
+                    <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                        <source src="img/video/bags_cp.mp4" type="video/mp4">
+                    </video>
+                    <p>Diffusion Probabilistic Limited-Angle CT Reconstruction with Structurally Coherent 3D Volumes.  </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <video width="100%" height="400" controls="True" preload="none" loop muted autoplay = 'autoplay' playsInline>
+            <source type="video/mp4" src="img/Presentation1.mov" />
+            <source type="video/webm" src="img/video1.webm" />
+        </video> -->
+        <br>
+        <h2>Abstract</h2>
+        <hr>
+        <p> 
+            Limited-Angle Computed Tomography (LACT) is a non-destructive 3D imaging technique used in a variety of applications ranging from security to medicine. The limited angle coverage in LACT is often a dominant source of severe artifacts in the reconstructed images, making it a challenging imaging inverse problem. Diffusion models are a recent class of deep generative models for synthesizing realistic images using image denoisers. In this work, we present <i>Diffusion Probabilistic Limited-Angle CT Reconstruction(<b>DOLCE</b>)</i> as the first framework for integrating conditionally-trained diffusion models and explicit physical measurement models for solving imaging inverse problems. DOLCE achieves the SOTA performance in highly ill-posed LACT by alternating between the data-fidelity and sampling updates of a diffusion model conditioned on the transformed sinogram. We show through extensive experimentation that unlike existing methods, DOLCE can synthesize high-quality and structurally coherent 3D volumes by using only 2D conditionally pre-trained diffusion models. We further show on several challenging real LACT datasets that the same pre-trained DOLCE model achieves the SOTA performance on drastically different types of images.
+        </p>
+
+        <div class="section">
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/Fig1.png" style="width:100%" alt="Banner">
+                    <p><b>Figure 1:</b> 3D rendering of a luggage from its 2D slices (2nd row) reconstructed using DOLCE on the limited-angle data containing just one-third of the views (0-60◦).</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <!-- <div class="section">
+        <div class="row align-items-center">
+			<div class="col justify-content-center text-center">
+                <p>Input Video</p>
+                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/video/bags_cp.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="section">
+        <h2>2D Prior for 3D Reconsturction</h2>
+        <hr>
+        <div class="row align-items-center">
+			<div class="col justify-content-center text-center">
+                <p>Input Video</p>
+                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/video/reverse_diffusion .mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col justify-content-center text-center">
+                <p>CURE</p>
+                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/video/reverse_diffusion .mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Reconstruction using CNN Priors Trained on Mismatched Data</h2>
+        <hr>
+
+        <div class="row align-items-center">
+			<div class="col justify-content-center text-center">
+                <img src="img/Fig2.png" style="width:100%" alt="Banner">
+                <p><b>Figure 3:</b> Reconstruction of a brain MRI image for two subsampling rates (10% and 30%) using several priors. MRI (AWGN) refers to a CNN prior trained as an image denoiser for MRI images. MRI (AR), CT (AR), and Natural (AR) refer to CNN priors trained as artifact-removing (AR) operators within implicit DMBAs using deep equilibrium models (DEQ). </p>
+            </div>
+        </div>
+        
+        <div class="row align-items-center">
+			<div class="col justify-content-center text-center">
+                <img src="img/Fig3.png" style="width:100%" alt="Banner">
+                <p><b>Figure 4:</b> Parallel MRI reconstruction of a brain MRI image from  the AXT2 dataset using CNN priors trained on MRI images from other datasets and anatomical regions.</p>
+            </div>
+        </div>
+
+ 
+    </div>
+
+    <div class="section">
+        <h2>Reconstruction using CNNs Approximating Proximal Operators </i> </h2>
+        <hr>
+        <div class="row align-items-center">
+			<div class="col justify-content-center text-center">
+                <img src="img/Fig4.png" style="width:100%" alt="Banner">
+                <p><b>Figure 5:</b>Visual results on two different CT images. The error to the ground truth is computed using the conditional mean and the variance corresponds to  per-pixel standard deviation.  It is evident that the ill-posed nature of the reconstruction task has a direct impact on the diversity of the generated samples, and the variances are highly correlated with the reconstruction errors.</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col justify-content-center text-center">
+                    <img src="img/Fig5.png" style="width:98%" alt="Banner">
+                    <p><b>Figure 6:</b>We use a region growing 3D segmentation in all cases and the resulting segmentations are highlighted in color, against a 3D rendering of the reconstructed 2D slices using half of view. Note that our method performs very similar to ground truth in determining the object boundaries compared to RLS and DPS.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="section">
+        <h2>Paper</h2>
+        <hr>
+        <div>
+            <div class="list-group text-center">
+                <a href="https://arxiv.org/abs/2207.13200"
+                   class="list-group-item">
+                    <img src="img/paper.png" style="width:80%; margin-right:-20px; margin-top:-10px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Bibtex</h2>
+        <hr>
+        <div class="bibtexsection">
+            @article{Liu.etal2023,
+                title={DOLCE: A model-based probabilistic diffusion 
+                              framework for limited-angle ct reconstruction},
+                author={Liu, Jiaming and Anirudh, Rushil and Thiagarajan, Jayaraman J 
+                    and He, Stewart and Mohan, K Aditya and Kamilov, Ulugbek S. and Kim, Hyojin},
+                journal={ICCV},
+                year={2023}
+              }
+        </div>
+    </div>
+
+    <hr>
+
+   <footer>
+       <p>Acknoledgements: Web templates from <a href="https://www.vincentsitzmann.com/siren/">SIREN</a> and <a href="https://wustl-cig.github.io/decolearnwww">DeCoLearn</a>.</p>
+   </footer>
+</div>
+
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>-->
+
+</body>
+</html>
