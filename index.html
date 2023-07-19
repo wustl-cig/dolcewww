@@ -33,7 +33,7 @@
     <h2>DOLCE: A Model-Based Probabilistic Diffusion Framework for</h2> 
     <h2>Limited-Angle CT Reconstruction</h2>
     <h3></h3> <!--ICCV, 2023</h3>-->
-            <p class="abstract"><b>The First Model-Based Conditional Diffusion Method for Limited-Angle CT</b></p>
+            <p class="abstract"><b>A Model-Based Diffusion Sampler for Limited-Angle CT</b></p>
     <hr>
     <p class="authors">
         <a href="https://jiamingliu-jeremy.github.io"> Jiaming Liu</a><sup>1</sup>,
@@ -67,31 +67,26 @@
         <div class="section">
             <div class="row align-items-center">
                 <div class="col justify-content-center text-center">
-                    
                     <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
                         <source src="img/video/bags_cp.mp4" type="video/mp4">
                     </video>
-                    <p>Diffusion Probabilistic Limited-Angle CT Reconstruction Generating Structurally Coherent 3D Volumes.  </p>
+                    <p><b>Figure 1:</b> Illustration of slices from a luggage reconstructed using Filtered Back Projection (FBP), Diffusion Posterior Sampling (DPS), and the proposed DOLCE method. Note the remarkable accuracy of the DOLCE reconstructions that preserve fine details.</p>
                 </div>
             </div>
         </div>
 
-        <!-- <video width="100%" height="400" controls="True" preload="none" loop muted autoplay = 'autoplay' playsInline>
-            <source type="video/mp4" src="img/Presentation1.mov" />
-            <source type="video/webm" src="img/video1.webm" />
-        </video> -->
         <br>
         <h2>Abstract</h2>
         <hr>
         <p> 
-            Limited-Angle Computed Tomography (LACT) is a non-destructive 3D imaging technique used in a variety of applications ranging from security to medicine. The limited angle coverage in LACT is often a dominant source of severe artifacts in the reconstructed images, making it a challenging imaging inverse problem. Diffusion models are a recent class of deep generative models for synthesizing realistic images using image denoisers. In this work, we present <i>Diffusion Probabilistic Limited-Angle CT Reconstruction(<b>DOLCE</b>)</i> as the first framework for integrating conditionally-trained diffusion models and explicit physical measurement models for solving imaging inverse problems. DOLCE achieves the SOTA performance in highly ill-posed LACT by alternating between the data-fidelity and sampling updates of a diffusion model conditioned on the transformed sinogram. We show through extensive experimentation that unlike existing methods, DOLCE can synthesize high-quality and structurally coherent 3D volumes by using only 2D conditionally pre-trained diffusion models. We further show on several challenging real LACT datasets that the same pre-trained DOLCE model achieves the SOTA performance on drastically different types of images.
+            Limited-Angle Computed Tomography (LACT) is a non-destructive 3D imaging technique used in a variety of applications ranging from security to medicine. The limited angle coverage in LACT is often a dominant source of severe artifacts in the reconstructed images, making it a challenging imaging inverse problem. Diffusion models are a recent class of deep generative models for synthesizing realistic images using image denoisers. In this work, we present <i>Diffusion Probabilistic Limited-Angle CT Reconstruction (<b>DOLCE</b>)</i> as the first framework for integrating conditionally-trained diffusion models and explicit physical measurement models for solving imaging inverse problems. DOLCE achieves the SOTA performance in highly ill-posed LACT by alternating between the data-fidelity and sampling updates of a diffusion model conditioned on the transformed sinogram. We show through extensive experimentation that unlike existing methods, DOLCE can synthesize high-quality and structurally coherent 3D volumes by using only 2D conditionally pre-trained diffusion models. We further show on several challenging real LACT datasets that the same pre-trained DOLCE model achieves the SOTA performance on drastically different types of images.
         </p>
 
         <div class="section">
             <div class="row align-items-center">
                 <div class="col justify-content-center text-center">
                     <img src="img/Fig1.png" style="width:100%" alt="Banner">
-                    <p><b>Figure 1:</b> 3D rendering of a luggage from its 2D slices (2nd row) reconstructed using DOLCE on the limited-angle data containing just one-third of the views (0-60◦).</p>
+                    <p><b>Figure 2:</b> 3D rendering of a luggage (Row 1) from its 2D slices (Row 2) reconstructed using FBP, DPS, and DOLCE from the limited-angle CT data containing just one-third of the views from angle range 0-60<sup>◦</sup>.</p>
                 </div>
             </div>
         </div>  
@@ -134,14 +129,14 @@
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
                 <img src="img/Fig2.png" style="width:100%" alt="Banner">
-                <p><b>Figure 3:</b> Visual evaluation of limited angle tomographic reconstruction in body CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively. PSNR (dB) is indicated at bottom for each reconstruction, measured against the ground truth.</p>
+                <p><b>Figure 2:</b> Visual evaluation of limited angle tomographic reconstruction in body CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively. PSNR (dB) is indicated at bottom for each reconstruction, measured against the ground truth.</p>
             </div>
         </div>
         
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
                 <img src="img/Fig3.png" style="width:100%" alt="Banner">
-                <p><b>Figure 4:</b> Visual evaluation of limited angle tomographic reconstruction in security check-in luggage CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively.</p>
+                <p><b>Figure 3:</b> Visual evaluation of limited angle tomographic reconstruction in security check-in luggage CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively.</p>
             </div>
         </div>
 
