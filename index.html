@@ -81,31 +81,22 @@
         <p> 
             Limited-Angle Computed Tomography (LACT) is a non-destructive 3D imaging technique used in a variety of applications ranging from security to medicine. The limited angle coverage in LACT is often a dominant source of severe artifacts in the reconstructed images, making it a challenging imaging inverse problem. Diffusion models are a recent class of deep generative models for synthesizing realistic images using image denoisers. In this work, we present <i>Diffusion Probabilistic Limited-Angle CT Reconstruction (<b>DOLCE</b>)</i> as the first framework for integrating conditionally-trained diffusion models and explicit physical measurement models for solving imaging inverse problems. DOLCE achieves the SOTA performance in highly ill-posed LACT by alternating between the data-fidelity and sampling updates of a diffusion model conditioned on the transformed sinogram. We show through extensive experimentation that unlike existing methods, DOLCE can synthesize high-quality and structurally coherent 3D volumes by using only 2D conditionally pre-trained diffusion models. We further show on several challenging real LACT datasets that the same pre-trained DOLCE model achieves the SOTA performance on drastically different types of images.
         </p>
+    </div>
+    
 
+    <div class="section">
+        <h2>DOLCE for 3D LACT Reconsturction (90º view)</h2>
+        <hr>
+        
         <div class="section">
             <div class="row align-items-center">
                 <div class="col justify-content-center text-center">
-                    <img src="img/Fig1.png" style="width:100%" alt="Banner">
+                    <img src="img/Fig1.jpg" style="width:100%" alt="Banner">
                     <p><b>Figure 2:</b> 3D rendering of a luggage (Row 1) from its 2D slices (Row 2) reconstructed using FBP, DPS, and DOLCE from the limited-angle CT data containing just one-third of the views from angle range 0-60<sup>◦</sup>.</p>
                 </div>
             </div>
         </div>  
-    </div>
-    
-    <!-- <div class="section">
-        <div class="row align-items-center">
-			<div class="col justify-content-center text-center">
-                <p>Input Video</p>
-                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/video/bags_cp.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div> -->
 
-    <div class="section">
-        <h2>2D Denoising Diffusion Model for 3D Reconsturction (90º view)</h2>
-        <hr>
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
                 <p>Medical CT</p>
@@ -119,24 +110,25 @@
                     <source src="img/video/reverse_diffusion .mp4" type="video/mp4">
                 </video>
             </div>
+            <p><b>Figure 3:</b> Evolution of the synthesized 3D images accross DOLCE iterates. Left image shows a medical CT image, while the right image shows a luggage CT.</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>Reconstruction Comparison Results on Two Dataset </h2>
+        <h2>Comparison of Reconstruction Performance on Two Dataset </h2>
         <hr>
 
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
-                <img src="img/Fig2.png" style="width:100%" alt="Banner">
-                <p><b>Figure 2:</b> Visual evaluation of limited angle tomographic reconstruction in body CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively. PSNR (dB) is indicated at bottom for each reconstruction, measured against the ground truth.</p>
+                <img src="img/Fig2.jpg" style="width:100%" alt="Banner">
+                <p><b>Figure 4:</b> Visual evaluation of limited angle tomographic reconstruction in body CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively. PSNR (dB) is indicated at bottom for each reconstruction, measured against the ground truth.</p>
             </div>
         </div>
         
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
-                <img src="img/Fig3.png" style="width:100%" alt="Banner">
-                <p><b>Figure 3:</b> Visual evaluation of limited angle tomographic reconstruction in security check-in luggage CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively.</p>
+                <img src="img/Fig3.jpg" style="width:100%" alt="Banner">
+                <p><b>Figure 5:</b> Visual evaluation of limited angle tomographic reconstruction in security check-in luggage CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively.</p>
             </div>
         </div>
 
@@ -148,13 +140,13 @@
         <hr>
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
-                <img src="img/Fig4.png" style="width:100%" alt="Banner">
-                <p><b>Figure 5:</b>Visual results on two different CT images. The error to the ground truth is computed using the conditional mean and the variance corresponds to  per-pixel standard deviation.  It is evident that the ill-posed nature of the reconstruction task has a direct impact on the diversity of the generated samples, and the variances are highly correlated with the reconstruction errors.</p>
+                <img src="img/Fig4.jpg" style="width:100%" alt="Banner">
+                <p><b>Figure 6:</b> Visual results on two different CT images. The error to the ground truth is computed using the conditional mean and the variance corresponds to  per-pixel standard deviation.  It is evident that the ill-posed nature of the reconstruction task has a direct impact on the diversity of the generated samples, and the variances are highly correlated with the reconstruction errors.</p>
             </div>
             <div class="row align-items-center">
                 <div class="col justify-content-center text-center">
-                    <img src="img/Fig5.png" style="width:98%" alt="Banner">
-                    <p><b>Figure 6:</b>We use a region growing 3D segmentation in all cases and the resulting segmentations are highlighted in color, against a 3D rendering of the reconstructed 2D slices using half of view. Note that our method performs very similar to ground truth in determining the object boundaries compared to RLS and DPS.</p>
+                    <img src="img/Fig5.jpg" style="width:98%" alt="Banner">
+                    <p><b>Figure 7:</b> We use a region growing 3D segmentation in all cases and the resulting segmentations are highlighted in color, against a 3D rendering of the reconstructed 2D slices using half of view. Note that our method performs very similar to ground truth in determining the object boundaries compared to RLS and DPS.</p>
                 </div>
             </div>
         </div>
@@ -190,7 +182,7 @@
     <hr>
 
    <footer>
-       <p>Acknoledgements: Web templates from <a href="https://www.vincentsitzmann.com/siren/">SIREN</a> and <a href="https://wustl-cig.github.io/decolearnwww">DeCoLearn</a>.</p>
+       <p>Acknoledgement: Web template is from <a href="https://www.vincentsitzmann.com/siren/">here</a>.</p>
    </footer>
 </div>
 </body>
