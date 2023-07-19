@@ -69,7 +69,7 @@
                     <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
                         <source src="img/video/bags_cp.mp4" type="video/mp4">
                     </video>
-                    <p>Diffusion Probabilistic Limited-Angle CT Reconstruction with Structurally Coherent 3D Volumes.  </p>
+                    <p>Diffusion Probabilistic Limited-Angle CT Reconstruction Generating Structurally Coherent 3D Volumes.  </p>
                 </div>
             </div>
         </div>
@@ -107,17 +107,17 @@
     </div> -->
 
     <div class="section">
-        <h2>2D Prior for 3D Reconsturction</h2>
+        <h2>2D Diffusion Model Prior for 3D Reconsturction (90º view)</h2>
         <hr>
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
-                <p>Input Video</p>
-                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
-                    <source src="img/video/reverse_diffusion .mp4" type="video/mp4">
+                <p>Medical CT</p>
+                <video width="97.5%" playsinline="" autoplay="" loop="" preload="" muted="">
+                    <source src="img/video/body1.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="col justify-content-center text-center">
-                <p>CURE</p>
+                <p>Security Check-in CT</p>
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
                     <source src="img/video/reverse_diffusion .mp4" type="video/mp4">
                 </video>
@@ -126,20 +126,20 @@
     </div>
 
     <div class="section">
-        <h2>Reconstruction using CNN Priors Trained on Mismatched Data</h2>
+        <h2>Reconstruction Comparison Results on Two Dataset </h2>
         <hr>
 
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
                 <img src="img/Fig2.png" style="width:100%" alt="Banner">
-                <p><b>Figure 3:</b> Reconstruction of a brain MRI image for two subsampling rates (10% and 30%) using several priors. MRI (AWGN) refers to a CNN prior trained as an image denoiser for MRI images. MRI (AR), CT (AR), and Natural (AR) refer to CNN priors trained as artifact-removing (AR) operators within implicit DMBAs using deep equilibrium models (DEQ). </p>
+                <p><b>Figure 3:</b> Visual evaluation of limited angle tomographic reconstruction in body CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively. PSNR (dB) is indicated at bottom for each reconstruction, measured against the ground truth.</p>
             </div>
         </div>
         
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
                 <img src="img/Fig3.png" style="width:100%" alt="Banner">
-                <p><b>Figure 4:</b> Parallel MRI reconstruction of a brain MRI image from  the AXT2 dataset using CNN priors trained on MRI images from other datasets and anatomical regions.</p>
+                <p><b>Figure 4:</b> Visual evaluation of limited angle tomographic reconstruction in security check-in luggage CT scan, where the input measurements are captured respectively from an angular coverage of 60º (top) and 90º (bottom), respectively.</p>
             </div>
         </div>
 
@@ -147,7 +147,7 @@
     </div>
 
     <div class="section">
-        <h2>Reconstruction using CNNs Approximating Proximal Operators </i> </h2>
+        <h2>Additional Ablation Studies </i> </h2>
         <hr>
         <div class="row align-items-center">
 			<div class="col justify-content-center text-center">
